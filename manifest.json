@@ -1,0 +1,24 @@
+{
+  "name": "glink",
+  "version": "0.8",
+  "description": "Create aliases for URLs",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "images/glink_icon16.png",
+    "24": "images/glink_icon24.png",
+    "32": "images/glink_icon32.png",
+    "48": "images/glink_icon48.png",
+    "128": "images/glink_icon128.png"
+  },
+  "manifest_version": 2
+}

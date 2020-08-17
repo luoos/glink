@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>glink</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <p class="title is-1 is-spaced">glink</p>
+        <div class="container mb-5">
+          <p>Create short aliases for URLs</p>
+          <br>
+          <p>Type the alias in the address bar and hit the enter, then you will be redirected to the corresponding URL.</p>
+          <br>
+          <p>Go to <a href="https://github.com/luoos/glink">luoos/glink</a> for troubleshooting.</p>
+        </div>
+        <!-- section to add rule -->
+
+        <div class="container mb-6">
+          <p class="subtitle is-3" id="rules">Add Rule</p>
+          <div class="columns">
+            <div class="column is-8">
+              <div class="field">
+                <label class="label">Alias</label>
+                <div class="control">
+                  <input class="input" id="alias-input" type="text" value="go/">
+                </div>
+                <p class="help is-danger" id="alias-prompt"></p>
+              </div>
+              <div class="field">
+                <label class="label">URL</label>
+                <div class="control">
+                  <input class="input" id="url-input" type="text" placeholder="full url">
+                </div>
+                <p class="help is-danger" id="url-prompt"></p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-3">
+            <div class="control">
+              <button class="button is-primary" id="add-button">Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- section of existing rules -->
+        <div id="existing-rules-meta">
+          <p class="subtitle is-3">Rules</p>
+          <div class="columns">
+            <div class="column is-2">
+              Alias
+            </div>
+            <div class="column">
+              URL
+            </div>
+            <div class="column is-3">
+              Used Count
+            </div>
+          </div>
+        </div>
+        <section id="existing-rules">
+          <!-- rendered dynamically -->
+        </section>
+      </div>
+    </section>
+  </body>
+  <script src="options.js"></script>
+</html>
