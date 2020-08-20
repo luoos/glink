@@ -45,23 +45,13 @@ chrome.webRequest.onBeforeRequest.addListener(
 )
 
 chrome.runtime.onInstalled.addListener(function(details) {
-  chrome.storage.sync.get(null, function(rules) {
-    console.log("onInstalled, sync routerGlobal");
-    for (let key in rules) {
-      console.log("key: ", key, "obj: ", rules[key]);
-      routerGlobal[key] = rules[key];
-    }
-  });
+  console.log("onInstalled");
+  pullRules();
 });
 
 chrome.runtime.onStartup.addListener(function() {
-  chrome.storage.sync.get(null, function(rules) {
-    console.log("onStartup, sync routerGlobal");
-    for (let key in rules) {
-      console.log("key: ", key, "obj: ", rules[key]);
-      routerGlobal[key] = rules[key];
-    }
-  });
+  console.log("onStartup");
+  pullRules();
 });
 
 function increaseAccessCnt(request_url, rule) {
@@ -69,4 +59,14 @@ function increaseAccessCnt(request_url, rule) {
   let obj = {};
   obj[request_url] = rule;
   chrome.storage.sync.set(obj);
+}
+
+function pullRules() {
+  chrome.storage.sync.get(null, function(rules) {
+    console.log("pulling rules...");
+    for (let key in rules) {
+      console.log("add rule. key: ", key, "obj: ", rules[key]);
+      routerGlobal[key] = rules[key];
+    }
+  });
 }
