@@ -1,20 +1,12 @@
 import {trySaveRule, convertAlias} from "./common.js"
 
-const ADD_BUTTON_ID = "add-button";
-const ALIAS_INPUT_ID = "alias-input";
-const URL_INPUT_ID = "url-input";
-const EXISTING_RULES_SECTION_ID = "existing-rules";
-const EXISTING_RULES_SECTION_META_ID = "existing-rules-meta";
-const ALIAS_PROMPT_ID = "alias-prompt";
-const URL_PROMPT_ID = "url-prompt";
-
-var aliasInput = document.getElementById(ALIAS_INPUT_ID)
-var urlInput = document.getElementById(URL_INPUT_ID)
-var addButton = document.getElementById(ADD_BUTTON_ID);
-var existingRulesSection = document.getElementById(EXISTING_RULES_SECTION_ID);
-var existingRulesSectionMeta = document.getElementById(EXISTING_RULES_SECTION_META_ID);
-var aliasPrompt = document.getElementById(ALIAS_PROMPT_ID);
-var urlPrompt = document.getElementById(URL_PROMPT_ID);
+const aliasInput = document.getElementById("alias-input")
+const urlInput = document.getElementById("url-input")
+const addButton = document.getElementById("add-button");
+const existingRulesSection = document.getElementById("existing-rules");
+const existingRulesSectionMeta = document.getElementById("existing-rules-meta");
+const aliasPrompt = document.getElementById("alias-prompt");
+const urlPrompt = document.getElementById("url-prompt");
 
 addButton.onclick = () => trySaveRule(aliasInput, urlInput, aliasPrompt, urlPrompt, renderRules);
 
