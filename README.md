@@ -4,8 +4,8 @@ Chrome extension to create aliases for URLs. Then you just enter a short alias t
 
 For example,
 
-1. type `c/` to go to [Google Calendar](https://calendar.google.com/calendar/r)
-2. type `y/` to go to [Youtube](https://calendar.google.com/calendar/r)
+1. type `c/` to go to Google Calendar
+2. type `y/` to go to Youtube
 3. type `xxx/yyy` to go to certain page
 
 You can customize all these rules.
@@ -17,9 +17,16 @@ Recommendation:
 
 ## Install
 
-Install on Chrome Web Store. (TBD)
+### 1. Install on Chrome Web Store. (TBD)
 
-## Configure Rules
+### 2. Install Manually
+
+1. Clone or download the source code
+2. Go to `chrome://extensions/` (type the link in the address bar)
+3. Enable `Developer mode`. It should locate on the top-right corner of the page
+4. Click the `Load unpacked` and select the folder that contains the source code
+
+## Usage
 
 ### 1. Add rules
 
