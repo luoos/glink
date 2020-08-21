@@ -13,6 +13,8 @@ export function trySaveRule(aliasInput, urlInput, aliasPrompt, urlPrompt, render
     saveRule(alias, url, renderMethod);
     aliasInput.value = "go/";
     urlInput.value = "";
+    urlPrompt.className = "help is-primary";
+    urlPrompt.innerText = "Success!";
   }
 }
 
@@ -26,6 +28,7 @@ function checkAlias(alias, aliasPrompt) {
 }
 
 function checkUrl(url, urlPrompt) {
+  urlPrompt.className = "help is-danger";
   if (url.length == 0) {
     urlPrompt.innerText = "please use a non-empty url";
     return false;

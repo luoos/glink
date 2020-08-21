@@ -3,6 +3,7 @@
   "version": "0.8",
   "description": "Create aliases for URLs",
   "permissions": [
+    "activeTab",
     "storage",
     "webRequest",
     "webRequestBlocking",
@@ -11,6 +12,17 @@
   "background": {
     "scripts": ["background.js"],
     "persistent": true
+  },
+  "browser_action": {
+    "default_title": "add rule",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/glink_icon16.png",
+      "24": "images/glink_icon24.png",
+      "32": "images/glink_icon32.png",
+      "48": "images/glink_icon48.png",
+      "128": "images/glink_icon128.png"
+    }
   },
   "options_page": "options.html",
   "icons": {

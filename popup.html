@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  </head>
+  <body>
+    <div class="container px-3 py-3">
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <label class="label">Alias</label>
+            <div class="control">
+              <input class="input" id="alias-input" type="text" value="go/">
+            </div>
+            <p class="help is-danger" id="alias-prompt"></p>
+          </div>
+          <div class="field">
+            <label class="label">URL</label>
+            <div class="control">
+              <input class="input" id="url-input" type="text" placeholder="full url">
+            </div>
+            <p class="help is-danger" id="url-prompt"></p>
+          </div>
+        </div>
+      </div>
+      <div class="field is-3">
+        <div class="control">
+          <button class="button is-primary" id="add-button">Add</button>
+        </div>
+        <p class="help is-primary" id="result-prompt"></p>
+      </div>
+      <div class="columns mt-3">
+        <div class="column">
+          <span style="vertical-align: middle;">Open </span><button class="button is-small" id="option-button">Options</button><span style="vertical-align: middle;"> to see all rules.</span>
+        </div>
+      </div>
+    </div>
+    <script src="common.js" type="module"></script>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
