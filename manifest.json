@@ -1,6 +1,6 @@
 {
   "name": "glink",
-  "version": "0.8",
+  "version": "0.9",
   "description": "Create aliases for URLs",
   "permissions": [
     "activeTab",
