@@ -17,7 +17,9 @@ Recommendation:
 
 ## Install
 
-### 1. Install on Chrome Web Store. (TBD)
+### 1. Install from Chrome Web Store.
+
+[glink on Chrome Web Store](https://chrome.google.com/webstore/detail/glink/djamlokjblgcpopojpandilmhmlednie?hl=en)
 
 ### 2. Install Manually
 
